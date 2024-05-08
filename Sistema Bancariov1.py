@@ -26,17 +26,22 @@ while True:
             print("Valor inválido! Informe um valor maior que zero!")
 
 
-    elif opcao == "s":
+     elif opcao == "s":
         if numero_saques < 3:
             saque = int(input("Valor do Saque: "))
             if saque > 0:
+                
                 if saque <= saldo:
-                    numero_saques += 1
-                    saldo = saldo - saque
-                    extrato = extrato + "\n Saque...: -"+ str(saque)
-                    print("Saque realizado com sucesso!")
+                    
+                    if saque <= 500:
+                        numero_saques += 1
+                        saldo = saldo - saque
+                        extrato = extrato + "\n Saque...: -"+ str(saque)
+                        print("Saque realizado com sucesso!")
+                    else:
+                        print("Valor do Saque maior que seu limite de R$ 500,00")     
                 else:
-                    print("Saldo insuficiente!!")        
+                    print("Saldo insuficiente!!")
             else:
                 print("Valor inválido! Informe um valor maior que zero!")
         else:
