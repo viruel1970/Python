@@ -17,26 +17,26 @@ while True:
     opcao = input(menu)
 
     if opcao == "d":
-        deposito = int(input("Valor do Depósito: "))
+        deposito = float(input("Valor do Depósito: "))
         if deposito > 0:
-            saldo = saldo + deposito
-            extrato = extrato + "\n Depósito: +"+ str(deposito)
+            saldo += deposito
+            extrato += f"\n Depósito: R$ {deposito:.2f}\n"
             print("Depósito realizado com sucesso!")
-        else:    
+        else:   
             print("Valor inválido! Informe um valor maior que zero!")
 
 
-     elif opcao == "s":
+    elif opcao == "s":
         if numero_saques < 3:
-            saque = int(input("Valor do Saque: "))
+            saque = float(input("Valor do Saque: "))
             if saque > 0:
                 
                 if saque <= saldo:
                     
                     if saque <= 500:
                         numero_saques += 1
-                        saldo = saldo - saque
-                        extrato = extrato + "\n Saque...: -"+ str(saque)
+                        saldo -= saque
+                        extrato += f"\n Saque...: R$ {saque:.2f}\n"
                         print("Saque realizado com sucesso!")
                     else:
                         print("Valor do Saque maior que seu limite de R$ 500,00")     
@@ -50,8 +50,10 @@ while True:
 
 
     elif opcao == "e":
+        print("\n-------------EXTRATO-----------------")
         print(f"Extrato: {extrato}")
         print(f"\n Saldo...: R$ {saldo:.2f}")
+        print("\n-------------------------------------")
 
 
     elif opcao == "q":
