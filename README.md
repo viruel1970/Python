@@ -28,4 +28,4 @@ Criado um e-book com informações natty e imagens que dificilmente encontraria.
 ## 💭 Reflexão (Opcional)
 Criar este e-book foi inspirador. Como já conheço este tema, pude validar o conteúdo gerado e foi incrível.
 
-Acesse o e-book AQUI
+[Acesse o e-book AQUI](https://github.com/viruel1970/Python/blob/main/Como%20tornar-se%20um%20trader%20by%20IA.pdf)
